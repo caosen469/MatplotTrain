@@ -68,3 +68,11 @@ def my_plotter(ax, data1, data2, param_dict):
     """
     out = ax.plot(data1, data2, **param_dict)
     return out
+
+
+# using the function
+data1, data2, data3, data4 = np.random.randn(100, 4)
+
+fig, (ax1, ax2) = plt.subplots(1, 2)
+my_plotter(ax1, data1, data2, {'marker': 'x'})
+my_plotter(ax2, data3, data4, {'marker': 'o'})
